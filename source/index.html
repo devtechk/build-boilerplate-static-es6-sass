@@ -2,14 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lorem Ipsum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Spotify</title>
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <h1 class="test-class">Ullamco Laboris</h1>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <span>dolor in reprehenderit</span> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p><a href="page2.html">Page 2</a>
-  </div>
+  <header class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">
+          <span class="navbar-logo">Spotify</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <div class="content">
+        <h1 class="headline" data-prop="headline">
+          Get 3 months of Premium for $0.99.
+        </h1>
+
+        <p class="subhead bellow-headline" data-prop="subhead">
+          Only $9.99/month after. Cancel anytime.
+        </p>
+
+        <a href="/purchase/offer/3m-for-cheap" class="btn btn-cta" data-prop="cta_button" data-event-name="CampaignCallToActionClick" data-event-version="1" data-event-params="[&quot;US&quot;,&quot;midyear-2018&quot;,&quot;\/purchase\/offer\/3m-for-cheap&quot;]">
+          GET PREMIUM
+        </a>
+      </div>
+
+      <p class="tertiary" data-prop="tertiary">
+        Only&nbsp;$9.99/month after. Offer not available to users who already tried Premium. <a href="/legal/intro-offer-terms-and-conditions/">Terms apply.</a>
+      </p>
+    </div>
+  </section>
+  <section class="features">
+    <div class="container">
+      <h1 class="headline">Why go Premium?</h1>
+      <div class="benefit">
+        <div class="benefit-image">
+          <div>
+            <svg width="100%" height="100%" viewBox="0 0 242 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g>
+                  <circle fill="#f8f8f8" cx="121" cy="121" r="121"></circle>
+                  <path d="M193.856395,73 L65.7502091,184.056671 L72.1720246,140.390275 L17,183.114996 C38.1812298,217.747825 77.5177994,242.549091 121.447281,241.99076 C147.290902,241.662295 173.494371,232.041242 190.241868,220.52597 L204,164.89535 L164.324412,188.522035 L193.856395,73 Z" fill="#fff" transform="translate(110.500000, 157.500000) rotate(-360.000000) translate(-110.500000, -157.500000)"></path>
+                  <path d="M156,81 L106.215575,89.1666099 L105.703578,102.865439 L104.263588,141.379252C102.321261,139.470688 99.6972784,138.253271 96.7726186,138.141933 C90.5115279,137.904655 85.2442421,142.827254 85.0081681,149.136405 C84.772698,155.446166 89.657194,160.753884 95.9188884,160.99177 C102.180583,161.229048 107.447869,156.306449 107.683339,149.997297 C107.696018,149.654157 107.691188,149.315276 107.674282,148.979437 L109.358799,103.914328 L151.735575,96.9627015 L150.381924,133.181613 C148.435371,131.247496 145.793275,130.011827 142.846276,129.899881 C136.584581,129.662603 131.317295,134.584593 131.081825,140.894353 C130.845751,147.204114 135.730851,152.511832 141.992546,152.74911 C148.236731,152.986387 153.490734,148.091167 153.753373,141.80696 C153.756996,141.75342 155.512758,94.7651455 155.512758,94.7651455 L156,81 Z" fill="#000"></path>
+                  <path d="M73,120.621221 C60.8498889,120.621221 51,110.906262 51,98.9225908 C51,86.9389196 60.8498889,77.2239606 73,77.2239606 C85.1501111,77.2239606 95,86.9389196 95,98.9225908 C95,110.906262 85.1501111,120.621221 73,120.621221 Z" fill="#000"></path>
+                  <g transform="translate(65.000000, 89.000000)" stroke="#fff" stroke-width="4.84" stroke-linecap="round">
+                    <path d="M8,0.881434619 L8,16.5526675"></path>
+                    <polyline points="0.666666667 12.3334894 8 19.5663661 15.3333333 12.3334894"></polyline>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <h2 class="benefit-title">Download Music</h2>
+        <p class="benefit-body">Listen anywhere</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

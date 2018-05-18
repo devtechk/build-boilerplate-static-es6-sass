@@ -1,22 +1,197 @@
 $blue: #00f
-
-@font-face 
+@font-face
   font-family: 'Lato'
   src: url('./fonts/Lato-Regular.ttf')
+@font-face
+  font-family: 'Circular'
+  src: url('./fonts/circular-black.woff2')
+@font-face
+  font-family: 'Circular-book'
+  src: url('./fonts/circular-book.woff2')
+body
+  font-family: 'Circular'
+*
+  box-sizing: border-box
+.navbar
+  min-height: 54px
+.navbar-toggle
+  position: relative
+  float: right
+  margin-top: 9px
+  margin-bottom: 9px
+  border: 0
+  margin-right: -10px
+.navbar-fixed-top
+  position: fixed
+  right: 0
+  left: 0
+  top: 0
+  z-index: 100
+.navbar-default
+  background-color: #000000
+.navbar-toggle
+  position: relative
+  float: right
+  padding: 9px 10px
+  margin-top: 9px
+  margin-bottom: 9px
+  border: 0
+  margin-right: -10px
+  background: transparent
+  
+  .icon-bar
+    background-color: #fff
+    height: 3px
+    width: 22px
+    border-radius: 1px
+    transition: transform .2s,-webkit-transform .2s
+    transform-origin: 21px
+    display: block
+.navbar-toggle
+  .icon-bar
+    &+.icon-bar
+      margin-top: 4px
+.navbar-brand
+  float: left
+  font-size: 20px
+  padding: 0
+  height: auto
+  line-height: 1
+  color: white
 
-
-p 
-  font-family: Lato, sans-serif
-  font-size: 14px
-  line-height: 1.75em
-
-
-a,
-a:visited,
-a:hover,
-a:active 
-  color: $blue
-
-.test-class 
+.navbar-logo
+  width: 89px
+  height: 27px
+  margin-top: 13px
+  margin-bottom: 13px
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg%20id%3D"Layer_1"%20style%3D"enable-background%3Anew%200%200%20566.93%20170.04"%20xmlns%3D"http%3A//www.w3.org/2000/svg"%20xml%3Aspace%3D"preserve"%20viewBox%3D"0%200%20566.93%20170.04"%20version%3D"1.1"%20y%3D"0px"%20x%3D"0px"%20xmlns%3Axlink%3D"http%3A//www.w3.org/1999/xlink"%20width%3D"567"%20height%3D"171"%20fill%3D"%23FFF"><path%20d%3D"m87.996%201.277c-46.249%200-83.743%2037.493-83.743%2083.742%200%2046.254%2037.494%2083.745%2083.743%2083.745%2046.251%200%2083.743-37.491%2083.743-83.745%200-46.246-37.49-83.738-83.744-83.738zm38.404%20120.78c-1.504%202.467-4.718%203.24-7.177%201.737-19.665-12.019-44.417-14.734-73.567-8.075-2.809%200.644-5.609-1.117-6.249-3.925-0.643-2.809%201.11-5.609%203.926-6.249%2031.9-7.293%2059.263-4.154%2081.336%209.334%202.46%201.51%203.24%204.72%201.73%207.18zm10.25-22.799c-1.894%203.073-5.912%204.037-8.981%202.15-22.505-13.834-56.822-17.841-83.447-9.759-3.453%201.043-7.1-0.903-8.148-4.35-1.04-3.453%200.907-7.093%204.354-8.143%2030.413-9.228%2068.221-4.758%2094.071%2011.127%203.07%201.89%204.04%205.91%202.15%208.976zm0.88-23.744c-26.994-16.031-71.52-17.505-97.289-9.684-4.138%201.255-8.514-1.081-9.768-5.219-1.254-4.14%201.08-8.513%205.221-9.771%2029.581-8.98%2078.756-7.245%20109.83%2011.202%203.722%202.209%204.943%207.016%202.737%2010.733-2.2%203.722-7.02%204.949-10.73%202.739z"/><path%20d%3D"m232.09%2078.586c-14.459-3.448-17.033-5.868-17.033-10.953%200-4.804%204.523-8.037%2011.249-8.037%206.52%200%2012.985%202.455%2019.763%207.509%200.205%200.153%200.462%200.214%200.715%200.174%200.253-0.038%200.477-0.177%200.625-0.386l7.06-9.952c0.29-0.41%200.211-0.975-0.18-1.288-8.067-6.473-17.151-9.62-27.769-9.62-15.612%200-26.517%209.369-26.517%2022.774%200%2014.375%209.407%2019.465%2025.663%2023.394%2013.836%203.187%2016.171%205.857%2016.171%2010.63%200%205.289-4.722%208.577-12.321%208.577-8.44%200-15.324-2.843-23.025-9.512-0.191-0.165-0.453-0.24-0.695-0.226-0.255%200.021-0.488%200.139-0.65%200.334l-7.916%209.421c-0.332%200.391-0.29%200.975%200.094%201.313%208.96%207.999%2019.98%2012.224%2031.872%2012.224%2016.823%200%2027.694-9.192%2027.694-23.419%200.03-12.01-7.16-18.66-24.77-22.944z"/><path%20d%3D"m294.95%2064.326c-7.292%200-13.273%202.872-18.205%208.757v-6.624c0-0.523-0.424-0.949-0.946-0.949h-12.947c-0.523%200-0.946%200.426-0.946%200.949v73.602c0%200.523%200.423%200.949%200.946%200.949h12.947c0.522%200%200.946-0.426%200.946-0.949v-23.233c4.933%205.536%2010.915%208.241%2018.205%208.241%2013.549%200%2027.265-10.43%2027.265-30.368%200.02-19.943-13.7-30.376-27.25-30.376zm12.21%2030.375c0%2010.153-6.254%2017.238-15.209%2017.238-8.853%200-15.531-7.407-15.531-17.238%200-9.83%206.678-17.238%2015.531-17.238%208.81-0.001%2015.21%207.247%2015.21%2017.237z"/><path%20d%3D"m357.37%2064.326c-17.449%200-31.119%2013.436-31.119%2030.592%200%2016.969%2013.576%2030.264%2030.905%2030.264%2017.511%200%2031.223-13.391%2031.223-30.481%200-17.031-13.62-30.373-31.01-30.373zm0%2047.714c-9.281%200-16.278-7.457-16.278-17.344%200-9.929%206.755-17.134%2016.064-17.134%209.341%200%2016.385%207.457%2016.385%2017.351%200%209.927-6.8%2017.127-16.17%2017.127z"/><path%20d%3D"m425.64%2065.51h-14.247v-14.566c0-0.522-0.422-0.948-0.945-0.948h-12.945c-0.524%200-0.949%200.426-0.949%200.948v14.566h-6.225c-0.521%200-0.943%200.426-0.943%200.949v11.127c0%200.522%200.422%200.949%200.943%200.949h6.225v28.791c0%2011.635%205.791%2017.534%2017.212%2017.534%204.644%200%208.497-0.959%2012.128-3.018%200.295-0.165%200.478-0.483%200.478-0.821v-10.596c0-0.327-0.17-0.636-0.45-0.807-0.282-0.177-0.633-0.186-0.922-0.043-2.494%201.255-4.905%201.834-7.6%201.834-4.154%200-6.007-1.886-6.007-6.113v-26.756h14.247c0.523%200%200.944-0.426%200.944-0.949v-11.126c0.02-0.523-0.4-0.949-0.93-0.949z"/><path%20d%3D"m475.28%2065.567v-1.789c0-5.263%202.018-7.61%206.544-7.61%202.699%200%204.867%200.536%207.295%201.346%200.299%200.094%200.611%200.047%200.854-0.132%200.25-0.179%200.391-0.466%200.391-0.77v-10.91c0-0.417-0.268-0.786-0.67-0.909-2.565-0.763-5.847-1.546-10.761-1.546-11.958%200-18.279%206.734-18.279%2019.467v2.74h-6.22c-0.522%200-0.95%200.426-0.95%200.948v11.184c0%200.522%200.428%200.949%200.95%200.949h6.22v44.409c0%200.523%200.422%200.949%200.944%200.949h12.947c0.523%200%200.949-0.426%200.949-0.949v-44.406h12.088l18.517%2044.398c-2.102%204.665-4.169%205.593-6.991%205.593-2.281%200-4.683-0.681-7.139-2.025-0.231-0.127-0.505-0.148-0.754-0.071-0.247%200.087-0.455%200.271-0.56%200.511l-4.388%209.627c-0.209%200.455-0.03%200.989%200.408%201.225%204.581%202.481%208.716%203.54%2013.827%203.54%209.56%200%2014.844-4.453%2019.502-16.433l22.461-58.04c0.113-0.292%200.079-0.622-0.1-0.881-0.178-0.257-0.465-0.412-0.779-0.412h-13.478c-0.404%200-0.765%200.257-0.897%200.636l-13.807%2039.438-15.123-39.464c-0.138-0.367-0.492-0.61-0.884-0.61h-22.12z"/><path%20d%3D"m446.5%2065.51h-12.947c-0.523%200-0.949%200.426-0.949%200.949v56.485c0%200.523%200.426%200.949%200.949%200.949h12.947c0.522%200%200.949-0.426%200.949-0.949v-56.481c0-0.523-0.42-0.949-0.95-0.949z"/><path%20d%3D"m440.1%2039.791c-5.129%200-9.291%204.152-9.291%209.281%200%205.132%204.163%209.289%209.291%209.289%205.127%200%209.285-4.157%209.285-9.289%200-5.128-4.16-9.281-9.28-9.281z"/><path%20d%3D"m553.52%2083.671c-5.124%200-9.111-4.115-9.111-9.112s4.039-9.159%209.159-9.159c5.124%200%209.111%204.114%209.111%209.107%200%204.997-4.04%209.164-9.16%209.164zm0.05-17.365c-4.667%200-8.198%203.71-8.198%208.253%200%204.541%203.506%208.201%208.151%208.201%204.666%200%208.201-3.707%208.201-8.253%200-4.541-3.51-8.201-8.15-8.201zm2.02%209.138l2.577%203.608h-2.173l-2.32-3.31h-1.995v3.31h-1.819v-9.564h4.265c2.222%200%203.683%201.137%203.683%203.051%200.01%201.568-0.9%202.526-2.21%202.905zm-1.54-4.315h-2.372v3.025h2.372c1.184%200%201.891-0.579%201.891-1.514%200-0.984-0.71-1.511-1.89-1.511z"/></svg>')
+  background-repeat: no-repeat
+  font: 0/0 a
+  color: transparent
+  text-shadow: none
+  background-color: transparent
+  border: 0
+  background-size: 89px 27px
+  float: left
+  
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0
+  
+.container
+  margin-right: auto
+  margin-left: auto
+  padding-left: 15px
+  padding-right: 15px
+  
+.hero:before
+  content: " "
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: linear-gradient(0deg,#3794d1 20%,rgba(39,90,78,0) 65%,rgba(31,59,8,0) 100%)
+.hero
+  background-image: url(https://www.scdn.co/i/home/segmented-home/premium_dancer.png)
+  background-color: #5cb8f6
+  position: relative
+  background-position: right top 50px
+  background-size: auto
+  margin: 0
+  padding: 0
+  color: #ffffff
   text-align: center
-  color: red
+  z-index: 0
+  background-repeat: no-repeat
+  .container
+    display: flex
+    flex-direction: column
+    min-height: 75vh
+    max-width: 100%
+  .content
+    padding: 48px 0
+    margin: auto 0
+  .subhead
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0
+    font-weight: 900
+    margin: 12px 0 0
+  .btn
+    font-size: 14px
+    line-height: 1
+    border-radius: 500px
+    padding: 16px 48px 18px
+    transition-property: background-color,border-color,color,box-shadow,filter,-webkit-box-shadow,-webkit-filter
+    transition-duration: .3s
+    border-width: 0
+    letter-spacing: 2px
+    min-width: 160px
+    text-transform: uppercase
+    white-space: normal
+    display: inline-block
+    font-weight: 700
+    text-align: center
+    vertical-align: middle
+    touch-action: manipulation
+    cursor: pointer
+    background-image: none
+    border: 1px solid transparent
+    user-select: none
+  .btn-cta
+    color: #fff
+    background-color: #1db954
+    margin: 24px 0 0 0
+    
+  a.btn
+    text-decoration: none
+.headline
+  font-size: 56px
+  line-height: 64px
+  letter-spacing: -1.75px
+  font-weight: 900
+  color: inherit
+  margin: 12px 0 0
+.tertiary
+  font-family: 'Circular-book'
+  color: #efefef
+  font-weight: 400
+  font-size: 12px
+  line-height: 12px
+  letter-spacing: .25px
+  margin: 0 auto 32px
+  a
+    color: #efefef
+.features
+  text-align: center
+  margin: 0
+  padding: 48px 0 64px
+  .headline
+    font-size: 32px
+    line-height: 40px
+.benefit
+  margin: 32px 0 0
+.benefit-image
+  width: 200px
+  height: 200px
+  margin: 0 auto 18px
+.benefit-title
+  font-size: 20px
+  line-height: 28px
+  letter-spacing: 0
+.benefit-body
+  font-size: 16px
+  line-height: 24px
+  letter-spacing: -.25px
+  font-weight: 400
+  color: #575757
+  margin: 0
+  

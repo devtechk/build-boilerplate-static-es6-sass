@@ -8,13 +8,110 @@ $blue: #00f
 @font-face
   font-family: 'Circular-book'
   src: url('./fonts/circular-book.woff2')
+
+$breakpoint-tablet: 768px
+$breakpoint-medium: 992px
+$breakpoint-laptop: 1200px
 body
   font-family: 'Circular'
+  &.no-scroll
+    overflow: hidden
+.sidepanel-backdrop
+  &.overlay
+    @media (max-width: $breakpoint-medium)
+      background-color: rgba(0,0,0,.6)
+      -webkit-transition: background-color .2s linear
+      transition: background-color .2s linear
+      position: fix
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 10
 *
   box-sizing: border-box
 .navbar
-  min-height: 54px
+  min-height: 80px
+  @media (max-width: $breakpoint-medium)
+    min-height: 54px
+.navbar-collapse
+  @media (max-width: $breakpoint-medium)
+    display: none
+  @media (min-width: $breakpoint-medium)
+    display: block
+  &.open
+    @media (max-width: $breakpoint-medium)
+      background-color: #000
+      border-width: 0
+      height: 100%
+      margin: 0
+      min-height: 100vh
+      overflow-x: hidden
+      overflow-y: scroll
+      -webkit-overflow-scrolling: touch
+      padding: 38px
+      position: fixed
+      right: 0
+      top: 0
+      width: 375px
+      display: block
+      transform: translate(0,0)
+    .navbar-nav
+      li
+        float: left
+        @media (max-width: $breakpoint-medium)
+          clear: both
+        
+        a
+          @media (max-width: $breakpoint-medium)
+            background: 0 0
+            cursor: pointer
+            font-size: 30px
+            font-weight: 700
+            line-height: 30px
+            padding-left: 0
+            padding-top: 0
+            padding-right: 0
+            padding-bottom: 25px
+.navbar-nav
+  @media (min-width: $breakpoint-medium)
+    float: right
+    list-style: none
+    margin: 0
+  li
+    float: left
+    a
+      padding: 28px 17px
+      color: #ffffff
+      font-size: 16px
+      font-weight: 700
+      line-height: 24px
+      position: relative
+      display: block
+      text-decoration: none
+.sidepanel-item-small
+  a
+    @media (max-width: $breakpoint-medium)
+      font-size: 24px!important
+.divider
+  @media (min-width: $breakpoint-medium)
+    margin-top: 32px
+    margin-bottom: 32px
+    height: 16px
+    width: 1px
+    margin-left: 17px
+    margin-right: 17px
+    float: left
+    background-color: #ffffff
+  @media (max-width: $breakpoint-medium)
+    width: 20px
+    height: 2px
+    margin: 18px 0 46px
+    background-color: #ffffff
 .navbar-toggle
+  cursor: pointer
+  @media (min-width: $breakpoint-medium)
+    display: none
   position: relative
   float: right
   margin-top: 9px
@@ -28,17 +125,19 @@ body
   top: 0
   z-index: 100
 .navbar-default
+  @media (min-width: $breakpoint-medium)
+    background-color: transparent
   background-color: #000000
+  &.sticky
+    @media (min-width: $breakpoint-medium)
+      background-color: rgba(0,0,0,.6)
+      -webkit-transition: background-color .2s linear
+      transition: background-color .2s linear
 .navbar-toggle
-  position: relative
-  float: right
   padding: 9px 10px
-  margin-top: 9px
-  margin-bottom: 9px
-  border: 0
-  margin-right: -10px
   background: transparent
-  
+  z-index: 1000
+  outline: none
   .icon-bar
     background-color: #fff
     height: 3px
@@ -47,6 +146,15 @@ body
     transition: transform .2s,-webkit-transform .2s
     transform-origin: 21px
     display: block
+.navbar-toggle
+  &.close
+    .icon-bar:nth-child(3)
+      opacity: 0
+    .icon-bar:nth-child(2)
+      transform: rotate(-45deg)
+    .icon-bar:nth-child(4)
+      transform: rotate(45deg)
+
 .navbar-toggle
   .icon-bar
     &+.icon-bar
@@ -60,6 +168,12 @@ body
   color: white
 
 .navbar-logo
+  @media (min-width: $breakpoint-medium)
+    margin-top: 20px
+    margin-bottom: 20px
+    width: 132px
+    height: 40px
+    background-size: 132px 40px
   width: 89px
   height: 27px
   margin-top: 13px
@@ -89,7 +203,10 @@ body
   margin-left: auto
   padding-left: 15px
   padding-right: 15px
-  
+  @media (min-width: $breakpoint-tablet)
+    width: 750px
+  @media (min-width: $breakpoint-laptop)
+    width: 1170px
 .hero:before
   content: " "
   position: absolute
@@ -98,6 +215,8 @@ body
   right: 0
   bottom: 0
   left: 0
+  @media (min-width: $breakpoint-tablet)
+    background: radial-gradient(ellipse at center,rgba(255,255,255,.49) 0,rgba(255,255,255,.25) 0,rgba(134,174,204,0) 100%)
   background: linear-gradient(0deg,#3794d1 20%,rgba(39,90,78,0) 65%,rgba(31,59,8,0) 100%)
 .hero
   background-image: url(https://www.scdn.co/i/home/segmented-home/premium_dancer.png)
@@ -116,15 +235,25 @@ body
     flex-direction: column
     min-height: 75vh
     max-width: 100%
+    @media (min-width: $breakpoint-tablet)
+      min-height: 640px
   .content
     padding: 48px 0
     margin: auto 0
+    @media (min-width: $breakpoint-medium)
+      text-align: left
   .subhead
     font-size: 20px
     line-height: 28px
     letter-spacing: 0
     font-weight: 900
     margin: 12px 0 0
+    @media (min-width: $breakpoint-tablet)
+      font-size: 32px
+      line-height: 40px
+      letter-spacing: -.5px
+      font-weight: 900
+      margin: 12px 0 12px
   .btn
     font-size: 14px
     line-height: 1
@@ -160,6 +289,17 @@ body
   font-weight: 900
   color: inherit
   margin: 12px 0 0
+  @media (min-width: $breakpoint-tablet)
+    margin: 12px 0 12px
+    font-size: 80px
+    line-height: 88px
+    letter-spacing: -2px
+  @media (min-width: $breakpoint-medium)
+    font-size: 96px
+    line-height: 104px
+    letter-spacing: -2px
+    font-weight: 900
+    color: inherit
 .tertiary
   font-family: 'Circular-book'
   color: #efefef
@@ -177,12 +317,27 @@ body
   .headline
     font-size: 32px
     line-height: 40px
+    @media (min-width: $breakpoint-tablet)
+      font-size: 40px
+      line-height: 48px
+.benefit-main
+    display: flex
+    flex-flow: row wrap
+    @media (min-width: $breakpoint-laptop)
+      flex-flow: row nowrap
+      justify-content: space-around
+      align-items: center
 .benefit
   margin: 32px 0 0
+  flex: 1 1 50%
 .benefit-image
   width: 200px
   height: 200px
   margin: 0 auto 18px
+  @media (min-width: $breakpoint-tablet)
+    height: 226px
+    width: 226px
+    margin: 0 auto 24px
 .benefit-title
   font-size: 20px
   line-height: 28px
@@ -227,8 +382,8 @@ body
   color: #919496
   font-size: 10px
   text-decoration: none
-.market a
-  text-decoration: none
+.market
+  color: transparent
 .small-row
   display: flex
   padding: 1em 0

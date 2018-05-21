@@ -1,14 +1,25 @@
-// import $ from 'jquery'; Before using jQuery, install it with `npm install --save jquery`
+import $ from 'jquery';
+//Before using jQuery, install it with `npm install --save jquery`
 import './more-javascript/more.js';
 import 'normalize.css'; // Note this
 import './style/style.sass';
 import './style/style.css';
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
 
-const saySomething = (something) => {
-  console.log(something); // eslint-disable-line no-console
-};
+    if (scroll >= 100) {
+        $(".navbar-default").addClass("sticky");
+    } else {
+        $(".navbar-default").removeClass("sticky");
+    }
+});
+$(".navbar-toggle").click(function(e){
+    $(".navbar-collapse").toggleClass('open');
+    $(".navbar-toggle").toggleClass('close');
+    $(".sidepanel-backdrop").toggleClass("overlay");
+    $("body").toggleClass("no-scroll");
 
-saySomething('Something! (index.js)');
+});
 
 /*
 To use jQuery, first install it as a dependency: `npm install --save jquery`.

@@ -2,14 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lorem Ipsum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mApple</title>
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.0/css/swiper.min.css">
 </head>
 <body>
-  <div>
-    <h1 class="test-class">Ullamco Laboris</h1>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure <span>dolor in reprehenderit</span> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p><a href="page2.html">Page 2</a>
+<div class="main-container">
+  <nav class="custom-nav">
+    <div class="container">
+      <ul class="menu-list">
+        <li class="nav-items toggle">
+          <button class="btn"  id="menu-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </li>
+        <li class="nav-items icon-apple"><a href="#"></a></li>
+        <li class="nav-items shop-bag"><a href="#"></a></li>
+      </ul>
+    </div>
+
+  </nav>
+  <div class="container-slider">
+    <section class="container">
+      <!-- Slider main container -->
+      <div class="swiper-container swiper-no-swiping">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a class="link-slide" href="#">
+              <figure class="apple-bg apple-bg--music"></figure>
+              <span class="label">Apple Music</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="link-slide" href="#">
+              <figure class="apple-bg apple-bg--itunes"></figure>
+              <span class="label">iTunes</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="link-slide" href="#">
+              <figure class="apple-bg apple-bg--ipod"></figure>
+              <span class="label">iPod Touch</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="link-slide" href="#">
+              <figure class="apple-bg apple-bg--acc"></figure>
+              <span class="label">Accessori per la musica</span>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="link-slide" href="#">
+              <figure class="apple-bg apple-bg--present"></figure>
+              <span class="label">Carte regalo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+</div>
 </body>
 </html>

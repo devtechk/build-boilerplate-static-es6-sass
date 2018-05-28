@@ -55,5 +55,10 @@
     "webpack-dev-server": "^3.1.4",
     "webpackbar": "^2.6.1",
     "yargs": "^11.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "npm": "^6.1.0",
+    "swiper": "^4.3.0"
   }
 }

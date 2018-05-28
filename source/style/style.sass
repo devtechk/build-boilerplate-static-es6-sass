@@ -17,7 +17,9 @@
   padding: 0
   color: #ffffff
   margin: 0 auto
-
+.nav-items.toggle
+  @media (min-width: 769px)
+    display: none
 .toggle
   position: absolute
   left: 0
@@ -26,6 +28,8 @@
   width: 48px
   top: 0
   left: 50%
+  @media (min-width: 769px)
+    left: 0
   margin-left: -10px
   text-align: center
 .shop-bag
@@ -112,8 +116,10 @@
   padding-left: 34px
 .swiper-slide
   @media (min-width: 769px)
-    width: 6vw
-  width: 22.5vw
+    width: auto
+    padding: 0 1vw
+  width: auto
+  padding: 0 4vw
   .label
     color: white
     font-size: 11px

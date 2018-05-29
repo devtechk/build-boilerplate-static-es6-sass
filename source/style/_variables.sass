@@ -1,0 +1,7 @@
+$hero-img-w: 156.25vw
+$hero-img-h: 168.125vw
+//Function spare time
+
+@function get-vw($object, $base: 1280)
+  $vw: ($base * 0.01) * 1px
+  @return ($object / $vw) * 1vw

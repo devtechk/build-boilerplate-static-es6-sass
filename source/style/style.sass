@@ -1,3 +1,5 @@
+@import "variables"
+
 .custom-nav
   height: 48px
   position: absolute
@@ -30,6 +32,7 @@
   left: 50%
   @media (min-width: 769px)
     left: 0
+    padding: 0 16px
   margin-left: -10px
   text-align: center
 .shop-bag
@@ -90,7 +93,8 @@
   top: 48px
   width: 100%
   background-color: rgb(15, 15, 15)
-  padding-bottom: 18px
+  padding-bottom: 25px
+  padding-top: 12px
   @media (min-width: 769px)
     display: flex
 .apple-bg
@@ -99,7 +103,7 @@
   width: 28px
   background-position: center
   display: block
-  margin: 0 auto
+  margin: 0 auto 6px
   height: 54px
   &--music
     background-image: url("https://www.apple.com/v/music/f/images/overview/icons/apple_music_dark_large.svg")
@@ -131,3 +135,166 @@
     text-align: center
 .link-slide
   text-decoration: none
+.header
+  position: relative
+  z-index: 10
+.section-hero
+  overflow: hidden
+  background: #000
+  color: #ffffff
+  text-align: center
+  &--airpods
+    background: #EEF8E9
+    padding-top: 35px
+  &--ipod
+    padding: 130px 0 60px 0
+.hero-card
+  height: auto
+  @media(min-width: 736px) and (max-width: 1068px)
+    height: get-vw(950px, 768)
+.hero-content
+  position: relative
+  margin: 0 auto
+  width: 81.5%
+  max-width: 414px
+  @media(min-width: 736px) and (max-width: 1068px)
+    width: 90vw
+    max-width: none
+  @media(min-width: 1068px)
+    width: 980px
+    max-width: none
+.hero-img
+  background-image: url("https://www.apple.com/v/music/f/images/overview/video_endframe_small.jpg")
+  width: get-vw(500px, 320)
+  height: get-vw(584px, 320)
+  background-size: get-vw(500px, 320) get-vw(500px, 320)
+  background-repeat: no-repeat
+  z-index: 1
+  position: relative
+  right: 40vw
+  @media(min-width: 736px) and (max-width: 1068px)
+    background-size: 130vw 140vw
+    left: 7vw
+  @media(min-width: 1068px)
+    height: 1054px
+    left: 20%
+    background-size: 65vw 75vw
+.copy-wrapper
+  margin: auto
+  position: relative
+  top: 0
+  z-index: 10
+  padding: 30px 0
+  margin-top: get-vw(-230px, 320)
+  @media(min-width: 736px) and (max-width: 1068px)
+    position: absolute
+    margin-top: 40vw
+    text-align: left
+  @media(min-width: 1068px)
+    margin: 0
+    position: absolute
+    margin-top: 25vw
+    text-align: left
+  .link-all-on
+    color: #ffffff
+  &--airpods
+    margin-top: auto
+    color: #000
+    text-align: left
+    @media(min-width: 1068px)
+      top: 40%
+    .link-all-on
+      color: #000000
+  &--ipod
+    max-width: 350px
+.section-headline
+  font-size: 40px
+  line-height: 1.1
+  font-weight: 600
+  &--airpods
+    font-size: 27px
+    line-height: 1.14815
+    font-weight: 600
+    letter-spacing: .008em
+    @media (min-width: 1068px)
+      font-size: 44px
+.section-parag
+  font-size: 18px
+  line-height: 1.4446
+  font-weight: 400
+  letter-spacing: .016em
+  max-width: 250px
+  margin: auto
+  @media(min-width: 736px) and (max-width: 1068px)
+    text-align: left
+    margin: 0
+    width: 400px
+    max-width: none
+  @media(min-width: 1068px)
+    width: 460px
+    max-width: none
+.apple-music-logo
+  background-image: url("https://www.apple.com/v/music/f/images/overview/hero_logo_small_2x.png")
+  width: 104px
+  height: 28px
+  background-size: 104px 28px
+  background-repeat: no-repeat
+  margin: 0 auto
+  @media(min-width: 736px) and (max-width: 1068px)
+    margin: 0
+  @media(min-width: 1068px)
+    margin: 0
+.hero-links
+  a
+    text-decoration: none
+.btn-free
+  background: #FF365D
+  background-color: #FF365D
+  border: none
+  padding: 10px 18px
+  font-size: 17px
+  line-height: 1.47059
+  font-weight: 400
+  letter-spacing: -.022em
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif
+  border-radius: 4px
+  color: #fff
+  cursor: pointer
+  display: inline-block
+  min-width: 30px
+  text-align: center
+  white-space: nowrap
+.woman-img
+  background-image: url("https://www.apple.com/v/music/f/images/overview/airpods_small_2x.png")
+  width: 227px
+  height: 338px
+  background-size: 227px 338px
+  background-repeat: no-repeat
+  @media (min-width: 1068px)
+    width: 588px
+    height: 932px
+    background-size: 588px 932px
+    background-repeat: no-repeat
+    margin-left: 450px
+.ipod-img
+  background-image: url("https://images.apple.com/it/music/images/overview/ipod_large.png")
+  width: 227px
+  height: 338px
+  background-size: 227px 338px
+  background-repeat: no-repeat
+  @media (min-width: 1068px)
+    width: 286px
+    height: 600px
+    background-size: 286px 600px
+    background-repeat: no-repeat
+    margin-left: 650px
+.title-airpod
+  display: block
+  font-size: 19px
+  line-height: 1.21053
+  font-weight: 400
+  letter-spacing: .012em
+  margin-bottom: 20px
+  font-weight: 400
+  @media (min-width: 1068px)
+    font-size: 24px

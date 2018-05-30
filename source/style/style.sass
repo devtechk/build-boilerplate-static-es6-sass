@@ -71,6 +71,8 @@
     transform: rotate(45deg)
   .icon-bar:nth-last-child(2)
     transform: rotate(-45deg)
+  .shop-bag
+    transform: translateX(50px)
 .icon-apple a
   background-image: url("https://www.apple.com/ac/globalnav/3/it_IT/images/globalnav/apple/image_small.svg")
   background-size: 18px 48px
@@ -88,6 +90,7 @@
   height: 48px
   display: block
   padding: 0 16px
+  transition: transform .2s
 .container-slider
   position: absolute
   top: 48px
@@ -115,7 +118,7 @@
     background-image: url("https://www.apple.com/v/music/f/images/overview/icons/accessories_dark_large.svg")
   &--present
     background-image: url("https://www.apple.com/v/music/f/images/overview/icons/gift_cards_dark_large.svg")
-.swiper-wrapper
+.swiper-container
   padding-right: 34px
   padding-left: 34px
 .swiper-slide
@@ -147,6 +150,7 @@
     background: #EEF8E9
     padding-top: 35px
   &--ipod
+    background: #FFF1DE;
     padding: 130px 0 60px 0
 .hero-card
   height: auto
@@ -178,7 +182,7 @@
   @media(min-width: 1068px)
     height: 1054px
     left: 20%
-    background-size: 65vw 75vw
+    background-size: 50vw 50vw
 .copy-wrapper
   margin: auto
   position: relative
@@ -193,7 +197,7 @@
   @media(min-width: 1068px)
     margin: 0
     position: absolute
-    margin-top: 25vw
+    margin-top: 17vw
     text-align: left
   .link-all-on
     color: #ffffff
@@ -270,17 +274,18 @@
   height: 338px
   background-size: 227px 338px
   background-repeat: no-repeat
+  margin-bottom: 0
   @media (min-width: 1068px)
     width: 588px
     height: 932px
     background-size: 588px 932px
     background-repeat: no-repeat
-    margin-left: 450px
+    margin-left: 445px
 .ipod-img
   background-image: url("https://images.apple.com/it/music/images/overview/ipod_large.png")
-  width: 227px
-  height: 338px
-  background-size: 227px 338px
+  width: 159px
+  height: 332px
+  background-size: 159px 332px
   background-repeat: no-repeat
   @media (min-width: 1068px)
     width: 286px
